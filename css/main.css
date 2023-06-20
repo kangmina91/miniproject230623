@@ -1,0 +1,307 @@
+/* 색상 변수에 담아놓기 메인컬러 --mc 서브컬러 --sc */
+:root {
+    --mc: #6cd2cd;
+    --lc: #ddd;
+    --wc: #ffffff;
+    --dc: #444444;
+    --gc: #f9f9f9;
+    --bc: #000000;
+}
+
+.header {
+    position: relative;
+    top: 0;
+    z-index: 999;
+}
+
+.header .header_top_wrap {
+    background: var(--mc);
+}
+
+.header .header_top_wrap ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    height: 50px;
+}
+
+.header .header_top_wrap ul>li {}
+
+.header .header_top_wrap ul>li a {
+    position: relative;
+
+    font-size: 14px;
+    color: var(--wc);
+    padding: 2px 13px;
+}
+
+.header .header_top_wrap ul>li:first-child a {
+    color: var(--mc);
+    background: var(--wc);
+    border-radius: 16px;
+}
+
+.header .header_top_wrap ul>li~li:hover a {
+    color: var(--mc);
+    background: var(--wc);
+    border-radius: 16px;
+}
+
+.header .header_top_wrap ul>li:not(:first-child)~li a::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 2px;
+    background: var(--wc);
+}
+
+
+.header .header_center_wrap {
+
+    background: var(--wc);
+    line-height: 100px;
+}
+
+.header .header_center_wrap .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.header .header_center_wrap ul {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    gap: 15px;
+}
+
+
+.header .header_center_wrap input[type="text"] {
+    width: 300px;
+    height: 30px;
+    font-size: 15px;
+    font-family: 'Noto Sans KR';
+    transition: width 0.5s;
+    border: none;
+    border-bottom: 2px solid #000;
+}
+
+.header .header_center_wrap input[type="text"]:focus {
+    width: 350px;
+    height: 30px;
+    outline: none;
+
+}
+
+.header .header_center_wrap input[type="text"]::placeholder {
+    color: #ddd;
+}
+
+.header .header_center_wrap input[type="text"]:focus::placeholder {
+    color: transparent;
+}
+
+.header .header_center_wrap button {
+    border: none;
+    outline: none;
+    background: transparent;
+
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+.header .header_bottom_wrap {
+    background: var(--bc);
+}
+
+.header.on .header_bottom_wrap {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
+
+}
+
+.gnb>ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+
+}
+
+.gnb>ul>li a {
+    color: var(--wc);
+}
+
+
+/* 각 메뉴  */
+.gnb>ul>li {
+    position: relative;
+    word-wrap: nowrap;
+    word-break: keep-all;
+    font-size: 17px;
+    line-height: 50px;
+    width: auto;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0 20px;
+}
+
+
+/* 서브 메뉴 만들고 높이를 없애기 */
+.gnb>ul>li .sub_menu {
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    transform: translate(0, 0);
+    z-index: 999;
+    width: auto;
+    background: var(--bc);
+    text-align: left;
+    transition: 0.5s;
+    white-space: nowrap;
+}
+
+/* 메뉴에 마우스 갖다대면 서브 메뉴 등장 */
+.gnb>ul>li:hover .sub_menu {
+    height: auto;
+}
+
+.gnb>ul>li .right {
+    position: absolute;
+    transform: translate(155px, 0);
+}
+
+
+.gnb>ul>li .sub_menu>li {
+    font-weight: 500;
+    font-size: 15px;
+    color: #eee;
+    line-height: 3;
+}
+
+
+/* 서브 메뉴 리스트 안 a태그  */
+.gnb>ul>li .sub_menu>li a {
+    padding: 0 20px;
+}
+
+
+
+.gnb>ul>li:hover {
+    background: var(--mc);
+}
+
+.gnb>ul>li:hover .sub_menu {
+    background: var(--mc);
+}
+
+.gnb>ul>li .sub_menu>li:hover {
+    background: var(--wc);
+}
+
+.gnb>ul>li .sub_menu>li:hover a {
+    color: var(--mc);
+}
+
+
+/*
+
+
+메인 슬라이드
+
+
+*/
+
+
+.main_visual .arrows {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 15px;
+    z-index: 999;
+    font-size: 18px;
+    color: var(--wc);
+}
+
+.main_visual .arrows li {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.main_visual .arrows .left {
+    position: absolute;
+    left: 0;
+}
+
+.main_visual .arrows .right {
+    position: absolute;
+    left: 100px;
+
+}
+
+.main_visual .swiper-pagination {
+    position: absolute;
+    top: 0;
+    left: -45%;
+    color: var(--wc);
+
+}
+
+
+.main_visual .main_slide .itm {
+    height: calc(100vh - 180px);
+}
+
+
+.main_visual .main_slide .itm01 {
+    background: url(../img/mbg_01.jpg) no-repeat center top/cover;
+}
+
+.main_visual .main_slide .itm02 {
+    background: url(../img/mbg_02.jpg) no-repeat center top/cover;
+}
+
+.main_visual .main_slide .itm03 {
+    background: url(../img/mbg_03.jpg) no-repeat center top/cover;
+}
+
+
+.main_visual .main_slide .itm .content {
+    position: absolute;
+    bottom: 300px;
+    left: 600px;
+    transform: translate(-50%, -50%);
+    color: var(--wc);
+}
+
+.main_visual .main_slide .itm .content h3 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.main_visual .main_slide .itm .content strong {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 2;
+}
+
+.main_visual .main_slide .itm .content p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0 0 30px 0;
+}

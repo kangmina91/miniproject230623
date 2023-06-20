@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>7주차 과제</title>
+
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/common.css">
+        <link rel="stylesheet" href="./css/swiper.min.css">
+        <link rel="stylesheet" href="./css/aos.css">
+        <link rel="stylesheet" href="./css/animate.min.css">
+        <link rel="stylesheet" href="./css/main.css">
+
+        <script src="./js/jquery-1.12.4.min.js"></script>
+        <script src="./js/swiper.min.js"></script>
+        <script src="./js/aos.js"></script>
+        <script src="./js/main.js"></script>
+
+</head>
+
+<body>
+        <div class="wrap">
+                <header class="header">
+                        <div class="header_top_wrap">
+                                <div class="inner">
+                                        <ul>
+                                                <li><a href="">BIFAN</a></li>
+                                                <li><a href="">PRESS</a></li>
+                                                <li><a href="">BADGE</a></li>
+                                                <li><a href="">VOLUNTEER</a></li>
+                                        </ul>
+                                </div>
+                        </div>
+                        <div class="header_center_wrap">
+                                <div class="inner">
+                                        <h1><img src="./img/logo.gif" alt=""></h1>
+                                        <div class="search">
+                                                <form method="get" action="f">
+                                                        <input type="text" name="search" placeholder="#이상해도괜찮아 #통합검색">
+                                                        <button>
+                                                                <i class="xi-search"></i>
+                                                        </button>
+
+                                                </form>
+                                        </div>
+                                        <div class="service">
+                                                <ul>
+                                                        <li><a href=""><i class="xi-user"></i></a></li>
+                                                        <li><a href=""><i class="xi-log-in"></i></a></li>
+                                                        <li><a href=""><i class="xi-globus"></i></a></li>
+                                                </ul>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="header_bottom_wrap">
+                                <div class="inner">
+                                        <nav class="gnb">
+                                                <ul class="main_menu">
+                                                        <li><a href="">BIFAN</a>
+                                                                <ul class="sub_menu">
+                                                                        <li><a href="">소개</a>
+                                                                        <li><a href="">페스티벌 아이덴티티</a>
+                                                                        <li><a href="">프로그래머</a>
+                                                                        <li><a href="">시상</a>
+                                                                        <li><a href="">심사위원</a>
+                                                                        <li><a href="">파트너</a>
+                                                                        <li><a href="">영화제 후원</a>
+                                                                        <li><a href="">조직구성</a>
+                                                                        <li><a href="">역대 영화제</a>
+                                                                </ul>
+                                                        </li>
+                                                        <li><a href="">프로그램</a>
+                                                                <ul class="sub_menu left">
+
+                                                                        <li> <a href="">섹션 소개</a></li>
+                                                                        <li> <a href="">개막작</a>
+                                                                        </li>
+                                                                        <li> <a href="">폐막작</a>
+                                                                        </li>
+                                                                        <li> <a href="">부천
+                                                                                        초이스</a></li>
+
+                                                                        <li> <a href="">코리안
+                                                                                        판타스틱</a></li>
+                                                                        <li> <a href="">매드
+                                                                                        맥스</a></li>
+                                                                        <li> <a href="">아드레날린
+                                                                                        라이드</a></li>
+                                                                        <li> <a href="">메탈
+                                                                                        누아르</a></li>
+
+                                                                        <li> <a href="">메리
+                                                                                        고 라운드</a></li>
+                                                                        <li> <a href="">저
+                                                                                        세상 패밀리</a></li>
+                                                                        <li> <a href="">스트레인지
+                                                                                        오마쥬</a></li>
+                                                                        <li> <a href="">엑스라지</a>
+                                                                        </li>
+                                                                </ul>
+                                                                <ul class="sub_menu right">
+                                                                        <li> <a href="">최민식을
+                                                                                        보았다</a></li>
+
+
+                                                                        <li> <a href="">포크 호러: 잔혹한 땅, 믿음이라는 테러</a>
+
+                                                                        </li>
+
+                                                                        <li> <a href="">부천시
+                                                                                        50주년 기념전</a></li>
+
+                                                                        <li> <a href="">살아있는 덕후들의 밤</a></li>
+
+
+                                                                        <li>
+                                                                                <a href="">
+                                                                                        마이 게스트</a>
+                                                                        </li>
+
+                                                                        <li><a href="">테츠카
+                                                                                        마코토, 비주얼리즘</a></li>
+
+                                                                        <li><a href="">코나카
+                                                                                        카즈야, <싱글 에이트>에서 <br>
+                                                                                                &nbsp;&nbsp; &nbsp;
+                                                                                                <울트라맨>
+                                                                                                        까지</a>
+
+                                                                        </li>
+
+                                                                        <li><a href="">BIFAN
+                                                                                        x wavve 온라인 상영</a></li>
+                                                                        <li><a href="">상영작
+                                                                                        검색</a></li>
+
+
+                                                                </ul>
+                                                        </li>
+                                                        <li><a href="">괴담 캠퍼스</a>
+                                                                <ul class="sub_menu">
+                                                                        <li><a href="">괴담 캠퍼스</a>
+                                                                        <li><a href="">괴담
+                                                                                        창작지원</a>
+                                                                        <li><a href="">괴담
+                                                                                        아카이브</a>
+                                                                </ul>
+                                                        </li>
+                                                        <li><a href="">B.I.G</a>
+                                                                <ul class="sub_menu">
+                                                                        <li><a href="">B.I.G</a>
+                                                                        <li><a href="">NAFF 프로젝트 마켓</a>
+                                                                        <li><a href="">인더스트리 서비스</a>
+                                                                        <li><a href="">NAFF 환상영화학교</a>
+                                                                        <li><a href="">메이드 인 아시아</a>
+                                                                </ul>
+                                                        </li>
+                                                        <li><a href="">비욘드 리얼리티</a>
+                                                                <ul class="sub_menu">
+                                                                        <li><a href="">비욘드 리얼리티</a>
+                                                                        <li><a href="">Contents JAM : BIFAN X
+                                                                                        Unity
+                                                                                        Korea</a>
+                                                                        <li><a href="">Digital November</a>
+                                                                </ul>
+                                                        </li>
+                                                        <li><a href="">이벤트</a>
+                                                                <ul class="sub_menu">
+                                                                        <li><a href="">이벤트 스케줄</a>
+
+                                                                        <li><a href="">개&bull;폐막식</a>
+                                                                        </li>
+                                                                        <li><a href="">7월의 카니발</a>
+                                                                        </li>
+                                                                        <li><a href="">무료상영</a></li>
+                                                                        <li><a href="">프로그램 이벤트</a>
+                                                                        </li>
+                                                                        <li><a href="">전시</a></li>
+
+                                                                        <li><a href="">포럼</a></li>
+                                                                </ul>
+                                                        </li>
+                                                        <li><a href="">영화제 가이드</a>
+                                                                <ul class="sub_menu">
+                                                                        <li><a href="">BIFAN
+                                                                                        가이드</a></li>
+                                                                        <li><a href="">상영 스케줄</a>
+                                                                        </li>
+                                                                        <li><a href="">티켓 예매/확인</a>
+                                                                        </li>
+                                                                        <li><a href="">티켓 안내</a>
+                                                                        </li>
+                                                                        <li><a href="">비판홀릭</a></li>
+                                                                        <li><a href="">온라인 상영
+                                                                                        안내</a></li>
+                                                                        <li><a href="">관람
+                                                                                        유의사항</a></li>
+                                                                        <li><a href="">행사장 안내</a>
+                                                                        </li>
+                                                                        <li><a href="">셔틀버스</a></li>
+                                                                        <li><a href="">굿즈</a></li>
+                                                                        <li><a href="">판판판</a></li>
+                                                                        <li><a href="">참가 안내</a></li>
+
+                                                                </ul>
+                                                        </li>
+                                                        <li><a href="">커뮤니티</a>
+                                                                <ul class="sub_menu">
+                                                                        <li><a href="">공지사항</a>
+                                                                        </li>
+                                                                        <li><a href="">BIFAN 뉴스</a>
+                                                                        </li>
+                                                                        <li><a href="">사진/동영상</a></li>
+
+
+                                                                        <li><a href="">Guest
+                                                                                        Portraits</a>
+                                                                        </li>
+                                                                        <li><a href="">BIFAN
+                                                                                        E-daily</a>
+                                                                        </li>
+
+                                                                        <li><a href="">BIFAN
+                                                                                        비하인드</a></li>
+
+                                                                </ul>
+                                                        </li>
+                                                        <li><a href=""><i class="xi-bars"></i></a></li>
+                                                </ul>
+
+
+                                        </nav>
+
+                                </div>
+                        </div>
+                </header>
+                <main role="main" class="main">
+                        <seciton class="main_visual">
+                                <h2 class="blind">메인 슬라이드</h2>
+                                <div class="main_slide swiper ">
+                                        <div class="swiper-wrapper">
+                                                <div class="swiper-slide itm itm01">
+                                                        <span class="blind">개막작 01</span>
+                                                        <div class="inner content">
+                                                                <h3>개막작</h3>
+                                                                <strong>보 이즈 어프레이드</strong>
+                                                                <p>
+                                                                        아리 에스터 | 2023 | 179min
+                                                                </p>
+                                                                <a href="" class="obtn">Read More</a>
+                                                        </div>
+                                                </div>
+                                                <div class="swiper-slide itm itm02">
+                                                        <span class="blind">특별전 02</span>
+                                                        <div class="inner content">
+                                                                <h3>특별전</h3>
+                                                                <strong>최민식을 보았다</strong>
+
+                                                                <a href="" class="obtn">Read More</a>
+                                                        </div>
+                                                </div>
+                                                <div class="swiper-slide itm itm03">
+                                                        <span class="blind">이벤트 03</span>
+                                                        <div class="inner content">
+                                                                <h3>이벤트 (시민행사)</h3>
+                                                                <strong>7월의 카니발</strong>
+                                                                <p>
+                                                                        이상해도 괜찮은 신나는 도시 속 카니발<br>6월 30일(금) ~ 7월
+                                                                        2일(일)<br>부천시청 잔디광장, 소향로 일대
+                                                                </p>
+                                                                <a href="" class="obtn">Read More</a>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <!-- 화살표 수제작 -->
+                                <ul class="arrows">
+                                        <li class="left"> <i class="xi-arrow-left"></i></li>
+                                        <li class="right"> <i class="xi-arrow-right"></i></li>
+                                        <li class="swiper-pagination"></li>
+                                </ul>
+
+
+                        </seciton>
+                        <section class="main_program sec _sec_ani_ blind">
+                                <h2 class="blind">메인 프로그램</h2>
+                                <div class="title center">
+                                        <h3>PROGRAM</h3>
+                                </div>
+                                <div class="swiper-container ScreenTabSwiper swiper-container-horizontal program_tab">
+
+                                        <div class="swiper-wrapper">
+                                                <div class="swiper-slide screen_tab_btn swiper-slide-active">
+                                                        <span>부천 초이스</span>
+                                                </div>
+                                                <div class="swiper-slide screen_tab_btn swiper-slide-active">
+                                                        <span>코리안 판타스틱</span>
+                                                </div>
+                                                <div class="swiper-slide screen_tab_btn swiper-slide-active">
+                                                        <span>매드 맥스</span>
+                                                </div>
+                                                <div class="sub_slide">
+                                                        <figure class="itm">
+                                                                <img src="./img/pbg_01.png" alt="">
+                                                        </figure>
+                                                        <figure class="itm">
+                                                                <img src="./img/pbg_02.png" alt="">
+                                                        </figure>
+                                                        <figure class="itm">
+                                                                <img src="./img/pbg_03.png" alt="">
+                                                        </figure>
+                                                        <figure class="itm">
+                                                                <img src="./img/pbg_04.png" alt="">
+                                                        </figure>
+                                                        <figure class="itm">
+                                                                <img src="./img/pbg_05.png" alt="">
+                                                        </figure>
+                                                        <figure class="itm">
+                                                                <img src="./img/pbg_06.png" alt="">
+                                                        </figure>
+                                                        <figure class="itm">
+                                                                <img src="./img/pbg_07.png" alt="">
+                                                        </figure>
+                                                        <figure class="itm">
+                                                                <img src="./img/pbg_08.png" alt="">
+                                                        </figure>
+                                                        <figure class="itm">
+                                                                <img src="./img/pbg_09.png" alt="">
+                                                        </figure>
+                                                </div>
+                                        </div>
+                                </div>
+        </div>
+        </section>
+        <section class="main_tab sec _se_" id="menu">
+                <h2 class="blind">메인 탭</h2>
+                <div class="title">
+                        <h3>NEW SEASON MENU</h3>
+                        <p>새로운 시즌 메뉴를 소개합니다.</p>
+                </div>
+                <div class="inner content tab">
+                        <figure class>
+                                <img src="./img/shape2.png" alt="">
+                        </figure>
+                        <div class="tab_menu">
+                                <ul class="tab_link">
+                                        <li class="on"><a href="">콜드브루</a></li>
+                                        <li><a href="">사과바나나스무디</a></li>
+                                        <li><a href="">딸기라떼</a></li>
+                                </ul>
+
+                        </div>
+                        <div class="tab_content">
+                                <div class="con on">
+                                        <div class="img_box">
+                                                <img src="./img/pbg_01.png" alt="">
+                                        </div>
+                                        <div class="des">
+                                                콜드브루의 진하고 깊은 맛
+                                        </div>
+                                </div>
+                                <div class="con">
+                                        <div class="img_box">
+                                                <img src="./img/pbg_02.png" alt="">
+                                        </div>
+                                        <div class="des">
+                                                사과의 상쾌함이 한가득
+                                        </div>
+                                </div>
+                                <div class="con">
+                                        <div class="img_box">
+                                                <img src="./img/pbg_03.png" alt="">
+                                        </div>
+                                        <div class="des">
+                                                새콤달콤 딸기와 사랑에 빠진 라떼
+                                        </div>
+
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <section class="main_event sec _se_">
+                <h2 class="blind">메인콘텐츠</h2>
+                <div class="title">
+                        <h3>BETTER NEWS</h3>
+                        <p>베러먼데이의 소식을 알려드립니다.</p>
+                </div>
+                <div class="inner content">
+                        <figure class="card">
+                                <div class="img_box">
+                                        <img src="./img//cbg01.jpg" alt="">
+                                </div>
+                                <figcaption>
+                                        <strong>우리의 가치를 전하는 단어, ZERO | LESS | RECYCLE</strong>
+                                        <span>
+                                                우리의 가치를 전하는 단어,
+                                        </span>
+                                </figcaption>
+
+                        </figure>
+                        <figure class="card">
+                                <div class="img_box">
+                                        <img src="./img/cbg02.jpg" alt="">
+                                </div>
+                                <figcaption>
+                                        <strong>탭샵바 비하인드, 나만의 와인페어링을 찾아보다</strong>
+                                        <span>오직 베러먼데이 클럽에서 만나는 직장인 모임 먼데이 브랜드</span>
+
+
+                                </figcaption>
+                        </figure>
+                        <figure class="card">
+                                <div class="img_box">
+                                        <img src="./img/cbg03.jpg" alt="">
+                                </div>
+                                <figcaption>
+                                        <strong>비베러TV📺: 2050년을 향한 아름다운 지구를 만들기 위한 모험</strong>
+                                        <span>
+                                                be Better의 생생한 모습을 볼 수 있는
+
+                                                YouTube '비베러TV'
+                                        </span>
+                                </figcaption>
+                        </figure>
+                </div>
+        </section>
+        <section class="main_news sec _se_">
+                <h2 class="blind">메인 뉴스룸</h2>
+                <div class="title">
+                        <h3>PRESS RELEASE</h3>
+                        <p>베러먼데이의 공식 보도자료를 알려드립니다.</p>
+                </div>
+                <div class="inner content">
+                        <a href="">
+                                <div class="list">
+                                        <div class="tit">
+                                                <p>베러먼데이클럽, 라엘과 부전시장 베러플로깅 성료베러먼데이클럽, 라엘과 부전시장 베러플로깅 성료
+                                                </p>
+                                        </div>
+                                        <div class="date">
+                                                <strong>2023.05.24</strong>
+                                        </div>
+                                </div>
+                        </a>
+                        <a href="">
+                                <div class="list">
+                                        <div class="tit">
+                                                <p>고흥군 농산물 브랜드화 협약</p>
+                                        </div>
+                                        <div class="date">
+                                                <strong>2023.05.28</strong>
+                                        </div>
+                                </div>
+                        </a>
+                        <a href="">
+                                <div class="list">
+                                        <div class="tit">
+                                                <p>베러먼데이, 굿닥 직장인 응원 캠페인 ‘먼데이어택’ 진행</p>
+                                        </div>
+                                        <div class="date">
+                                                <strong>2023.05.30</strong>
+                                        </div>
+                                </div>
+                        </a>
+                </div>
+        </section>
+
+
+
+
+        </main>
+
+        <footer class="footer">
+                <h2 class="blind">고객지원센터</h2>
+                <div class="ft">
+                        <div class="inner content">
+                                <ul class="customer">
+                                        <li><a href="">(주) 베러먼데이코리아</a></li>
+                                        <li><a href="">대표 : 도경백</a></li>
+                                        <li><a href="">사업자 등록번호 : 475-81-01352</a></li>
+
+                                        <li><a href="">서울특별시 강남구 삼성로85길 34, INNO PLAY 3층 </a></li>
+                                        <li><a href="">부산광역시 해운대구 해운대해변로 371, 솔레비치 1층 </a></li>
+                                </ul>
+
+                                <ul class="sns">
+                                        <li><a href="" target="_blank"><i class="xi-instagram"></i></a></li>
+                                        <li><a href="" target="_blank"><i class="xi-kakaotalk"></i></a></li>
+                                        <li><a href="" target="_blank"><i class="xi-facebook"></i></a></li>
+                                </ul>
+                        </div>
+                </div>
+                <div class="fb">
+                        <div class="inner content">
+                                <address>
+                                        <ul class="link">
+                                                <li><a href="1@bettermonday.company">이메일 :
+                                                                1@bettermonday.company</a>
+                                                </li>
+                                                <li><a href="tel:1899-8232">대표전화 : 1899-8232</a></li>
+
+
+                                        </ul>
+                                </address>
+                                <div class="family_link">
+                                        <select id="fl">
+                                                <option value="">패밀리링크</option>
+                                                <option value="http://naver.com/">네이버</option>
+                                                <option value="http://daum.net/">다음</option>
+                                                <option value="http://google.co.kr/">구글</option>
+                                        </select>
+                                </div>
+
+                        </div>
+                </div>
+        </footer>
+
+        <div class="to_top">
+                <i class="xi-arrow-top"></i>
+        </div>
+
+        </div>
+</body>
+
+</html>
