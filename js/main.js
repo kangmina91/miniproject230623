@@ -1,4 +1,6 @@
 $(function () {
+
+
     // 스크롤 시 헤더 
     $(window).on('scroll', function () {
         let sct = $(window).scrollTop();
@@ -30,7 +32,7 @@ $(function () {
     })
 
 
-    // 스와이퍼 슬라이드
+    // 스와이퍼 메인 슬라이드
     const MainSlide = new Swiper('.main_slide', {
         loop: true,
         pagination: {
@@ -49,20 +51,39 @@ $(function () {
         MainSlide.slideNext();
     })
 
-
-
     // 탭 섹션
-    $('.tab_link li').on('click', function (event) {
+    $('.screen_tab_btn').on('click', function (event) {
         event.preventDefault();
-
         let idx = $(this).index();
-
         $(this).addClass('on').siblings().removeClass('on');
-        $('.tab_content .con').eq(idx).addClass('on').siblings().removeClass('on');
+        $('.tab_content .sub_slide').eq(idx).addClass('on').siblings().removeClass('on');
+
         console.log(event, event.target, event.currentTarget, $(this), $(this).index());
 
-
     });
+
+
+
+
+    // 스와이퍼 탭 슬라이드
+    const ProgramSlide = new Swiper('.sub_slide', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        freeMode: true,
+    });
+
+    $('.arrows_p .left').on('click', function () {
+        ProgramSlide.slidePrev();
+
+    })
+
+    $('.arrows_p .right').on('click', function () {
+        ProgramSlide.slideNext();
+
+    })
+
+
+
 
 
 
