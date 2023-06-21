@@ -169,10 +169,9 @@
     left: 0;
     transform: translate(0, 0);
     z-index: 999;
-    width: auto;
+    width: 285px;
     background: var(--bc);
     text-align: left;
-    transition: 0.5s;
     white-space: nowrap;
 }
 
@@ -181,9 +180,14 @@
     height: auto;
 }
 
+.gnb>ul>li:hover .right {
+    height: 540px;
+}
+
 .gnb>ul>li .right {
     position: absolute;
-    transform: translate(155px, 0);
+    transform: translate(250px, 0);
+
 }
 
 
