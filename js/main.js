@@ -51,11 +51,12 @@ $(function () {
         MainSlide.slideNext();
     })
 
+
     // 탭 섹션
     $('.screen_tab_btn').on('click', function (event) {
         event.preventDefault();
         let idx = $(this).index();
-        $(this).addClass('on').siblings().removeClass('on');
+        $('.screen_tab_btn').eq(idx).addClass('on').siblings().removeClass('on');
         $('.tab_content .sub_slide').eq(idx).addClass('on').siblings().removeClass('on');
 
         console.log(event, event.target, event.currentTarget, $(this), $(this).index());
@@ -64,23 +65,19 @@ $(function () {
 
 
 
-
     // 스와이퍼 탭 슬라이드
     const ProgramSlide = new Swiper('.sub_slide', {
+        ㅁ
         slidesPerView: 3,
         spaceBetween: 30,
         freeMode: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
     });
 
-    $('.arrows_p .left').on('click', function () {
-        ProgramSlide.slidePrev();
 
-    })
-
-    $('.arrows_p .right').on('click', function () {
-        ProgramSlide.slideNext();
-
-    })
 
 
 
