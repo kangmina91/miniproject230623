@@ -92,7 +92,37 @@ $(function () {
         },
     });
 
+    // 스와이퍼 카드 뉴스 슬라이드
+    const noticeSlide = new Swiper('.notice_slide', {
+        loop: true,
+        slidesPerView: 1,
+        slidesPerGroupSkip: 1,
+        spaceBetween: 0,
+        scrollbar: {
+            el: ".swiper-scrollbar",
+        },
+        pagination: {
+            el: ".swiper-pagination02",
+            type: "fraction",
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            }
 
+        }
+    });
+
+    // 스와이퍼 카드 뉴스 버튼
+    $('.main_notice .arrows .left').on('click', function () {
+        noticeSlide.slidePrev();
+    })
+
+
+    $('.main_notice .arrows .right').on('click', function () {
+        noticeSlide.slideNext();
+    })
 
 
 

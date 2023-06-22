@@ -60,13 +60,3 @@ body {
 p {
     line-height: 1.375;
 }
-
-.btn {
-    display: inline-block;
-    border: 1px solid #222;
-    border-radius: 50px;
-    padding: 15px 25px;
-    font-size: 25px;
-    overflow: hidden;
-    text-align: center;
-}
