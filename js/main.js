@@ -67,13 +67,15 @@ $(function () {
 
     // 스와이퍼 탭 슬라이드
     const ProgramSlide = new Swiper('.sub_slide', {
-        ㅁ
+        // loop: true,   // 슬라이드 반복 여부
+        // loopAdditionalSlides: 3,
         slidesPerView: 3,
         spaceBetween: 30,
         freeMode: true,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
+
         },
     });
 

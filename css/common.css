@@ -1,7 +1,7 @@
 /* common - 공통으로 적용될 것들 */
 
 /* 구글 웹폰트 한글 폰트로 노토 산스랑 영어 폰트로 로보트 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 /* 아이콘 xeicon */
 @import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
 
@@ -33,13 +33,14 @@ body {
 .sec .title h3 {
     font-size: 40px;
     font-weight: 700;
-    margin: 0 0 10px 0;
+    margin: 0 0 15px 0;
+    line-height: 1.5;
 }
 
 .sec .title strong {
     font-size: 20px;
     font-weight: 700;
-    line-height: 2;
+    line-height: 1.5;
 }
 
 .sec .title p {
