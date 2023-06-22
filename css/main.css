@@ -790,3 +790,7 @@
     font-size: 14px;
     font-weight: 500;
 }
+
+.swiper-scrollbar-drag {
+    background: #6cd2cd !important;
+}
