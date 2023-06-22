@@ -256,10 +256,10 @@
 
 }
 
-.main_visual .swiper-pagination {
+.main_visual .swiper-pagination01 {
     position: absolute;
     top: 0;
-    left: -45%;
+    left: 40px;
     color: var(--wc);
 
 }
@@ -378,14 +378,14 @@
 }
 
 
-.main_program {
-    background: var(--wc);
-}
+.main_program {}
 
+.main_program .inner {}
 
 .main_program .program_tab {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+
 }
 
 .main_program .program_tab .screen_tab_btn {
@@ -536,4 +536,69 @@
 .main_program .sub_slide .arrow_p .swiper-button-next::after {
     content: "\e90b";
     font-family: xeicon;
+}
+
+.main_service {}
+
+.main_service .content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.main_service .content .img_box img {
+    border-radius: 10px;
+}
+
+.main_service .content .txt_box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 40px;
+}
+
+.main_service .content .txt_box li {
+
+    font-size: 18px;
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    text-align: center;
+    background: var(--wc);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    line-height: 50px;
+
+}
+
+.main_service {
+    position: relative;
+}
+
+.main_service::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1170px;
+    height: 0.3px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.main_service .banner {
+    padding: 100px 0;
+}
+
+.main_service .banner .img_box {
+    width: 100%;
+}
+
+.main_service .banner .swiper-pagination {
+    bottom: 110px;
+}
+
+/* 색상 바꿈 */
+.swiper-pagination-bullet {
+    background: white !important;
 }

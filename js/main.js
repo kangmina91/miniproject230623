@@ -35,8 +35,9 @@ $(function () {
     // 스와이퍼 메인 슬라이드
     const MainSlide = new Swiper('.main_slide', {
         loop: true,
+
         pagination: {
-            el: ".swiper-pagination",
+            el: ".swiper-pagination01",
             type: "fraction",
         }
 
@@ -79,6 +80,17 @@ $(function () {
         },
     });
 
+    // 스와이퍼 배너 슬라이드
+    const Banner = new Swiper('.main_service .banner', {
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
 
 
 
