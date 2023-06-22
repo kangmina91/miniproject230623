@@ -14,7 +14,7 @@ $(function () {
     // 스크롤 시 애니메이션 효과
     $(window).on('scroll', function () {
         let sct = $(window).scrollTop();
-        $('._se_').each(function () {
+        $('._sec_scroll').each(function () {
             if (sct + $(window).innerHeight() - 200 > $(this).offset().top) {
                 $(this).addClass('on');
             } else {
@@ -82,6 +82,7 @@ $(function () {
 
     // 스와이퍼 배너 슬라이드
     const Banner = new Swiper('.main_service .banner', {
+        slidesPerView: 'auto',
         autoplay: {
             delay: 2500,
             disableOnInteraction: false,
@@ -93,7 +94,7 @@ $(function () {
     });
 
     // 스와이퍼 카드 뉴스 슬라이드
-    const noticeSlide = new Swiper('.notice_slide', {
+    const newsSlide = new Swiper('.news_slide', {
         loop: true,
         slidesPerView: 1,
         slidesPerGroupSkip: 1,
@@ -115,24 +116,17 @@ $(function () {
     });
 
     // 스와이퍼 카드 뉴스 버튼
-    $('.main_notice .arrows .left').on('click', function () {
-        noticeSlide.slidePrev();
+    $('.main_news .arrows_n .left').on('click', function () {
+        newsSlide.slidePrev();
     })
 
 
-    $('.main_notice .arrows .right').on('click', function () {
-        noticeSlide.slideNext();
+    $('.main_news .arrows_n .right').on('click', function () {
+        newsSlide.slideNext();
     })
 
 
 
-
-
-    $('.history_menu li').on('click', function (e) {
-        e.preventDefault();
-        let idx = $(this).index();
-        $('.history_content li').eq(idx).addClass('on').siblings().removeClass('on');
-    })
 
     // 패밀리링크 주소 받고 창 오픈
     $('#fl').on('change', function () {
