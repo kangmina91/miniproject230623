@@ -82,9 +82,12 @@ $(function () {
 
     // 스와이퍼 배너 슬라이드
     const Banner = new Swiper('.main_service .banner', {
+        loop: true,   // 슬라이드 반복 여부
+        loopAdditionalSlides: 3,
         slidesPerView: 'auto',
+        speed: 2000,
         autoplay: {
-            delay: 2500,
+            delay: 3000,
             disableOnInteraction: false,
         },
         pagination: {
@@ -128,30 +131,16 @@ $(function () {
 
 
 
-    // 패밀리링크 주소 받고 창 오픈
-    $('#fl').on('change', function () {
-        const lnk = $(this).val();
-        // console.log(lnk, '바뀌네~~~');
-        //val() 이 있을 때만...
-        // if (lnk) { window.open(lnk); }
-        // 리액트에서 쓰는 방식
-        lnk && window.open(lnk);
-    });
-
-
     // 탑 스크롤 
     $('.to_top').on('click', function () {
-        $('html, body').animate({ scrollTop: 0 }, 600);
+        $('html, body').animate({ scrollTop: 0 }, 800);
     })
     // 탑 스크롤 없앴다가 나타나게 만들기
     $(window).on('scroll', function () {
         let sct = $(window).scrollTop();
-        // sct > 1000 ? $('.to_top').show() : $('.to_top').hide();
-        // sct > 1000 ? $('.to_top').fadeIn(1000) : $('.to_top').fadeOut();
-        sct > 1000 ? $('.to_top').addClass('on') : $('.to_top').removeClass('on');
+
+        sct > 400 ? $('.to_top').addClass('on') : $('.to_top').removeClass('on');
     })
-
-
 
 
 

@@ -8,6 +8,7 @@
     --bc: #000000;
 }
 
+
 .header {
     position: relative;
     top: 0;
@@ -151,12 +152,12 @@
     position: relative;
     word-wrap: nowrap;
     word-break: keep-all;
-    font-size: 17px;
+    font-size: 18px;
     line-height: 50px;
     width: auto;
     text-align: center;
     vertical-align: middle;
-    padding: 0 10px;
+    padding: 0 20px;
     font-family: 'Diphylleia', serif;
     font-weight: 600;
 }
@@ -184,20 +185,29 @@
 }
 
 
+/* 다음에 해보기 */
+/* .gnb>ul>.side {
+    display: grid;
+    grid-template-columns: repeat(1fr, 1fr);
+    justify-content: space-between;
+    align-items: center;
+} */
+
+
 .gnb>ul>li .right {
     position: absolute;
-    transform: translate(164px, 0);
+    transform: translate(194px, 0);
 
 }
 
 
 .gnb>ul>li .sub_menu>li {
-    font-weight: 500;
-    font-size: 15px;
+    font-weight: 600;
+    font-size: 16px;
     color: #eee;
     line-height: 3;
     background: var(--mc);
-    padding: 0 40px 0 10px;
+    padding: 1px 45px 3px 20px;
 }
 
 
@@ -226,6 +236,9 @@
 
 */
 
+.main_visual {
+    position: relative;
+}
 
 .main_visual .arrows {
     position: absolute;
@@ -247,19 +260,84 @@
 
 .main_visual .arrows .left {
     position: absolute;
-    left: 0;
+    left: 15px;
 }
 
 .main_visual .arrows .right {
     position: absolute;
-    left: 100px;
+    left: 95px;
 
 }
+
+/* 메인 슬라이드 스크롤 효과 */
+.main_visual .scroll {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 998;
+}
+
+.main_visual .scroll span {
+    position: relative;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+
+}
+
+.main_visual .scroll span::before {
+
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 1px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, 0);
+}
+
+.main_visual .scroll span::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    transform: translate(-50%, 0);
+
+    animation: circle 1.5s infinite cubic-bezier(1, .18, .49, 1.03);
+
+}
+
+@keyframes circle {
+    0% {
+        transform: translate(-50%, 0);
+        outline: 0 solid rgba(255, 255, 255, 1);
+
+    }
+
+    90% {
+        outline: 0 solid rgba(255, 255, 255, 1);
+    }
+
+    100% {
+        transform: translate(-50%, 90px);
+        outline: 20px solid rgba(255, 255, 255, 0);
+    }
+}
+
+
+
+
 
 .main_visual .swiper-pagination01 {
     position: absolute;
     top: 0;
-    left: 40px;
+    left: 45px;
     color: var(--wc);
 
 }
@@ -811,7 +889,8 @@
 */
 
 .main_notice {
-    background: var(--gc);
+    background: var(--gc) url(../img/bg_icon.png) no-repeat center left 80%;
+    background-attachment: fixed;
 }
 
 
@@ -820,40 +899,53 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+
+
 }
 
 .main_notice .content .left_notice {
-
     background-color: var(--wc);
     border-radius: 20px;
     overflow: hidden;
-    padding: 15px 15px 0 15px;
-
+    padding: 20px;
 }
 
 .main_notice .content .left_notice .title_txt {
+    position: relative;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-    margin: 1px 0 15px 0;
-
+    margin: 0 0 15px 0;
 }
 
+/* 플렉스 줄긋기 - 포지션을 써서 해결하도록 한다. */
 .main_notice .content .left_notice .title_txt::after {
-    content: "";
-    width: 300px;
-    height: 1px;
-    background: #888;
-    visibility: hidden;
-    transition: 0.5s;
+    position: absolute;
 
+    content: "";
+    bottom: -5px;
+    left: 0;
+    height: 1px;
+    background: #ddd;
+    visibility: hidden;
 }
 
+/* 키프레임이 더 낫지 않나 싶음 */
 .main_notice .content .left_notice .title_txt:hover::after {
-    width: 100%;
+    animation: txt 1s both;
     visibility: visible;
+}
 
+
+@keyframes txt {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
 }
 
 .main_notice .content .left_notice .title_txt strong {
@@ -862,7 +954,7 @@
 }
 
 .main_notice .content .left_notice span {
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .main_notice .content .left_notice .btn {
@@ -879,14 +971,11 @@
     border-radius: 20px;
     overflow: hidden;
     padding: 30px;
-
 }
 
 
 .main_notice .content .right_notice span {
-
     font-size: 17px;
-
 }
 
 .main_notice .content .right_notice strong {
@@ -902,13 +991,14 @@
     font-size: 15px;
     color: #888;
     line-height: 50px;
+    margin: 0 0 10px 0;
 }
 
 .main_notice .content .right_notice .btn_blue {
     font-size: 15px;
     border-radius: 10px;
     background: #6cd2cd;
-    padding: 5px 10px;
+    padding: 10px 12px;
     line-height: 1.5;
     text-align: center;
 }
@@ -917,12 +1007,152 @@
     font-size: 15px;
     border-radius: 10px;
     background: #fa6e91;
-    padding: 5px 10px;
+    padding: 10px 12px;
     line-height: 1.5;
     text-align: center;
 }
 
-
 .footer {
-    background-color: #444444 !important;
+    background: #36373c;
+    padding: 50px 0;
+    color: #fff;
+}
+
+.footer .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .left_ft {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer .left_ft>ul li {
+    position: relative;
+}
+
+.footer .left_ft>ul:not(:first-child) li~li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translate(0, -50%);
+    width: 1px;
+    height: 12px;
+    background: #788;
+}
+
+footer .sns {
+    display: flex;
+    gap: 7px;
+}
+
+.footer .sns i {
+    padding: 8px;
+    background: #666;
+    color: var(--wc);
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+footer .customer {
+    display: flex;
+    gap: 20px;
+
+    font-size: 15px;
+}
+
+footer .contact {
+    display: flex;
+    gap: 20px;
+
+    color: #ababab;
+    font-size: 15px;
+}
+
+.footer .left_ft span {
+    font-size: 13px;
+    color: #ababab;
+}
+
+.footer .right_ft {}
+
+.footer .right_ft strong {
+    display: block;
+    margin: 0 0 10px 0;
+
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer .right_ft .input_area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer .right_ft .input_area .input_box ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer .right_ft input {
+    border: none;
+    outline: none;
+    background-color: #222;
+    border-radius: 7px;
+    width: 270px;
+    height: 41px;
+    padding-left: 10px;
+    color: #fff;
+}
+
+.footer .right_ft .subscription_box button {
+    border: none;
+    outline: none;
+    background-color: #4a4b4f;
+    border-radius: 7px;
+    color: #fff;
+    font-size: 16px;
+    height: 87px;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+
+
+
+/* 탑스크롤 */
+.to_top {
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+    z-index: 999;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.to_top.on {
+    bottom: 0px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.to_top i {
+    color: #fff;
+    background: var(--mc);
+    padding: 10px;
+    margin: 20px 5px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
 }
