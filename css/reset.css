@@ -40,17 +40,68 @@ img {
 }
 
 p {
+    /* line-height : 3rem + 3rem */
+    line-height: 1.375;
     /* 글자 잘 끊어라 */
     word-break: keep-all;
+}
+
+html {
+    /* 62.5% of 16px browser font size is 10px */
+    /* 16px * 0.625 = 10px */
+    font-size: 6.25%;
 }
 
 body {
     /* 폰트 사이즈만큼 박스를 차지혀라 */
     line-height: 1;
+    word-break: keep-all;
     color: #444;
+
+    /* 1.6 * 10px = 16px */
+    font-size: 16rem;
 }
 
 em,
 address {
     font-style: normal;
+}
+
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+
+/* 아이폰 반응형 대응 방식 */
+@media(max-width: 768px) {
+
+    html {
+        /* vw 390인 디바이스를 기준으로 폰트 사이즈를 pc에서 쓰는 rem과 동일하게 만드는 법 */
+        font-size: 0.25641025641vw;
+        /* 390 size에 맞춤 (16/390*6.25/100) 디자인 사이즈 */
+    }
+}
+
+@media (max-width: 860px) {
+    html {
+        font-size: 0.13020833333333335vw;
+    }
+}
+
+@media (max-width: 1023px) {
+    html {
+        font-size: 0.09775171065493645vw;
+    }
+}
+
+@media (max-width: 1480px) {
+    html {
+        font-size: 0.06756756756756757vw;
+    }
 }

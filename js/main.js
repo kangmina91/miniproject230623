@@ -54,10 +54,10 @@ $(function () {
 
 
     // 탭 섹션
-    $('.screen_tab_btn').on('click', function (event) {
+    $('.pt_btn').on('click', function (event) {
         event.preventDefault();
         let idx = $(this).index();
-        $('.screen_tab_btn').eq(idx).addClass('on').siblings().removeClass('on');
+        $('.pt_btn').eq(idx).addClass('on').siblings().removeClass('on');
         $('.tab_content .sub_slide').eq(idx).addClass('on').siblings().removeClass('on');
 
         console.log(event, event.target, event.currentTarget, $(this), $(this).index());
