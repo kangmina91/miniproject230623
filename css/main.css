@@ -144,9 +144,9 @@
 .gnb>ul>li a {
     display: block;
     color: var(--wc);
-    font-size: 18rem;
+    font-size: 16rem;
     font-weight: 600;
-    padding: 16rem;
+    padding: 17rem;
     width: 100%;
 }
 
@@ -168,7 +168,6 @@
     transform: translate(0, 0);
     z-index: 999;
     width: max-content;
-    transition: 0.3s;
 }
 
 .gnb>ul>li .large .sm_right {
@@ -180,17 +179,17 @@
 }
 
 .gnb>ul>li .sub_menu li a {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16rem;
     line-height: 20rem;
-    padding: 8rem 32rem 8rem 8rem;
+    padding: 12rem 24rem 8rem 8rem;
 }
 
 
 /* 메뉴에 마우스 갖다대면 서브 메뉴 등장 */
 .gnb>ul>li:hover .sub_menu {
     height: max-content;
-    padding: 16rem;
+    padding: 8rem;
 }
 
 .gnb>ul>li:hover {
@@ -329,7 +328,7 @@
 
 
 .main_visual .main_slide .itm {
-    height: calc(100vh - 180px);
+    height: calc(100vh - 180rem);
 }
 
 
@@ -354,26 +353,33 @@
     height: 400rem;
     transform: translate(-50%, -50%);
     color: var(--wc);
-    text-shadow: 1px 1px 0 #444444;
+    text-shadow: 2rem 4rem 0 #333;
 }
 
 .main_visual .main_slide .itm .content h3 {
-    font-size: 30rem;
-    font-weight: 700;
-    margin: 0 0 20px 0;
+    font-size: 32rem;
+    font-weight: 400;
+    margin: 0 0 40rem 0;
 }
 
 .main_visual .main_slide .itm .content strong {
     display: block;
-    font-size: 60rem;
+    font-size: 70rem;
     font-weight: 700;
-    margin: 0 0 50px 0;
+    margin: 0 0 16rem 0;
 }
 
 .main_visual .main_slide .itm .content p {
     font-size: 20rem;
-    font-weight: 400;
-    margin: 0 0 80px 0;
+    font-weight: 300;
+}
+
+.main_visual .main_slide .itm .content .obtn {
+    position: absolute;
+    left: 50%;
+    bottom: 100rem;
+    transform: translate(-50%, -50%);
+    margin: 0 0 0 -506rem;
 }
 
 /* 버튼 선 */
@@ -456,7 +462,7 @@
     font-size: 18rem;
     font-weight: 400;
     margin: 0 0 16rem 0;
-    color: #666;
+    color: #444;
     z-index: 2;
 
 }
@@ -527,7 +533,9 @@
 
 /* 탭 슬라이드 제목 */
 .main_program .tab_content .sub_slide>strong {
-    font-size: 24rem;
+    display: block;
+    text-align: center;
+    font-size: 32rem;
     font-weight: 600;
 }
 
@@ -557,30 +565,33 @@
 }
 
 /* 스와이퍼css 버튼 크기 수정 참고 */
-.main_program .sub_slide .arrow_p .swiper-button-prev {
+.main_program .sub_slide .arrow_p .swiper-button-prev,
+.swiper-button-next {
     position: absolute;
-    left: 1100rem;
-    top: 65rem;
+    top: 50%;
     transform: translate(-50%, -50%);
-    color: #000;
+    color: #555;
+    margin: -145rem 0 0 0;
+}
+
+.main_program .sub_slide .arrow_p .swiper-button-prev {
+    left: 48%;
+}
+
+.main_program .sub_slide .arrow_p .swiper-button-next {
+    left: 52%;
 }
 
 .main_program .sub_slide .arrow_p .swiper-button-prev::after {
     content: "\e908";
     font-family: xeicon;
-}
-
-.main_program .sub_slide .arrow_p .swiper-button-next {
-    position: absolute;
-    left: 1150rem;
-    top: 65rem;
-    transform: translate(-50%, -50%);
-    color: #000;
+    font-size: 24rem;
 }
 
 .main_program .sub_slide .arrow_p .swiper-button-next::after {
     content: "\e90b";
     font-family: xeicon;
+    font-size: 24rem;
 }
 
 /* 
@@ -674,10 +685,21 @@
 메인 카드 뉴스 탭 
 
 */
+
+.main_news {
+    position: relative;
+    background: #eee;
+}
+
+
 .main_news .content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 32rem;
+
     opacity: 0;
-    transform: translate(0, 100px);
-    transition: .8s;
+    transform: translate(0, 100rem);
+    transition: .5s;
 }
 
 
@@ -686,46 +708,22 @@
     transform: translate(0, 0);
 }
 
-.main_news {
-    position: relative;
-    background: #eee;
-}
-
-
-
-.main_news p {
-    font-size: 15rem;
-    font-weight: 300;
-    line-height: 20rem;
-    margin: 0 0 57px 0;
-}
-
-
-.main_news .content {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 30rem;
-
-}
 
 .main_news .left_news {
     background: #fa6e91;
     overflow: hidden;
     border-radius: 20rem;
     overflow: hidden;
-    padding: 15rem;
-    margin: -60px 0 0 0;
+    padding: 16rem;
     color: var(--wc);
 }
 
 .main_news .left_news .img_box {
-    margin: 0 0 15px 0;
+    margin: 0 0 12rem 0;
     border-radius: 10rem;
     overflow: hidden;
 
 }
-
-
 
 .main_news .left_news .img_box img {
     height: 200rem;
@@ -735,29 +733,32 @@
 
 .main_news .left_news .img_box:hover img {
     transform: scale(1.1);
-
 }
 
 .main_news .left_news strong {
     display: block;
-    font-size: 25rem;
-    line-height: 1.5;
-    margin: 0 0 20px 0;
+    font-size: 20rem;
+    font-weight: 500;
+    line-height: 24rem;
+    margin: 0 0 10rem 0;
 }
 
-.main_news .left_news span {
-    display: block;
-    font-size: 15rem;
-    line-height: 1.5;
-    margin: 0 0 55px 0;
+.main_news .left_news p {
+    font-size: 16rem;
+    font-weight: 300;
+    line-height: 20rem;
 }
 
-.main_news .left_news .btn {
-    display: inline-block;
-    border-bottom: 1px solid var(--wc);
-    font-size: 17rem;
-    overflow: hidden;
-    text-align: center;
+.main_news .left_news a>span {
+    position: absolute;
+    bottom: 16rem;
+}
+
+.main_news .left_news a>span::after {
+    content: "\e90b";
+    font-family: xeicon;
+    vertical-align: bottom;
+    font-size: 20rem;
 }
 
 
@@ -768,25 +769,23 @@
 
 .main_news img {
     width: 100%;
-    height: 250rem;
+    height: 240rem;
     object-fit: cover;
 }
 
 .main_news .card {
     position: relative;
-    padding: 15rem;
+    padding: 16rem;
     background: var(--wc);
-    border-radius: 10rem;
-    margin: 0 0 30px 0;
+    border-radius: 20rem;
+    margin: 0 0 48rem 0;
     min-height: 400rem;
 }
 
 .main_news .card .img_box {
-    border-radius: 5rem;
+    border-radius: 15rem;
     overflow: hidden;
-    height: auto;
-    margin: 0 0 10px 0;
-
+    margin: 0 0 12rem 0;
 }
 
 .main_news .card .img_box img {
@@ -795,70 +794,55 @@
 
 .main_news .card .img_box:hover img {
     transform: scale(1.1);
-
 }
-
-
 
 .main_news .card strong {
     display: block;
-    margin: 15px 0;
-    line-height: 1.5;
-    margin: 0 0 10px 0;
+    font-size: 16rem;
+    line-height: 20rem;
 }
 
 
 .main_news .card span {
     position: absolute;
-    bottom: 10rem;
+    bottom: 16rem;
     font-size: 14rem;
 }
 
 
 .main_news .arrows_n {
     position: absolute;
-    bottom: 0;
-    left: 800rem;
+    bottom: 6rem;
+    right: 0;
     transform: translate(-50%, -50%);
     z-index: 1000;
-    color: var(--dc);
-    font-size: 0;
 }
 
-.main_news .arrows_n .left {
-    padding: 2rem;
-    font-size: 14rem;
+.main_news .arrows_n i {
+    font-size: 20rem;
     font-weight: 500;
-
-    margin: 5px 10px 0 -40rem;
     cursor: pointer;
 }
 
 .main_news .arrows_n .right {
-    padding: 2rem;
-    font-size: 14rem;
-    font-weight: 500;
-
-    margin: 5px -40px 0 40rem;
-    cursor: pointer;
-}
-
-.news_slide {
-    position: relative;
-}
-
-.news_slide .swiper-pagination02 {
-    position: absolute;
-    bottom: 12rem;
-    left: 787rem;
-    z-index: 1000;
-    font-size: 14rem;
-    font-weight: 500;
+    margin: 0 -24rem 0 40rem;
 }
 
 .swiper-scrollbar-drag {
     background: #6cd2cd;
 }
+
+.swiper-pagination02 {
+    position: absolute;
+    bottom: 20rem;
+    left: 50%;
+    z-index: 1000;
+    font-size: 14rem;
+    font-weight: 500;
+    margin: 0 0 0 364rem;
+}
+
+
 
 /* 
 
@@ -867,7 +851,7 @@
 */
 
 .main_notice {
-    background: var(--gc) url(../img/bg_icon.png) no-repeat center left 80%;
+    background: var(--gc) url(../images/bg_icon.png) no-repeat center left 80%;
     background-attachment: fixed;
 }
 
@@ -875,117 +859,84 @@
 .main_notice .content {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 36rem;
 }
 
 .main_notice .content .left_notice {
     background-color: var(--wc);
     border-radius: 20rem;
-    overflow: hidden;
-    padding: 40px 30px 20px 30rem;
+    padding: 24rem;
 }
 
 .main_notice .content .left_notice .title_txt {
     position: relative;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 0 15px 0;
+    display: grid;
+    grid-template-columns: 7fr 1fr;
 }
 
-/* 플렉스 줄긋기 - 포지션을 써서 해결하도록 한다. */
-.main_notice .content .left_notice .title_txt::after {
-    position: absolute;
-
-    content: "";
-    bottom: -5rem;
-    left: 0;
-    height: 1rem;
-    background: #ddd;
-    visibility: hidden;
-}
-
-/* 키프레임이 더 낫지 않나 싶음 */
-.main_notice .content .left_notice .title_txt:hover::after {
-    animation: txt 1s both;
-    visibility: visible;
-}
-
-
-@keyframes txt {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 100%;
-    }
+.main_notice .content .left_notice .title_txt:not(:last-child) {
+    margin: 0 0 16rem 0;
 }
 
 .main_notice .content .left_notice .title_txt strong {
-    font-size: 13rem;
+    font-size: 14rem;
     font-weight: 500;
+}
+
+.main_notice .content .left_notice .title_txt strong:hover {
+    font-weight: 700;
 }
 
 .main_notice .content .left_notice span {
     font-size: 12rem;
 }
 
-.main_notice .content .left_notice .btn {
-    font-size: 13rem;
-    font-weight: 600;
-    position: absolute;
-    top: -50rem;
-    left: 520rem;
-}
-
 
 .main_notice .content .right_notice {
     background-color: var(--wc);
     border-radius: 20rem;
-    overflow: hidden;
-    padding: 30rem;
+    padding: 24rem;
 }
 
 
 .main_notice .content .right_notice span {
-    font-size: 17rem;
+    font-size: 20rem;
+    font-weight: 500;
 }
 
 .main_notice .content .right_notice strong {
     display: inline-block;
-    font-size: 35rem;
-    font-weight: 900;
-    margin: 0 0 5px 40rem;
-    vertical-align: middle;
-
+    font-size: 40rem;
+    font-weight: 700;
+    vertical-align: sub;
+    margin: 0 0 8rem 24rem;
 }
 
 .main_notice .content .right_notice p {
-    font-size: 15rem;
-    color: #888;
-    line-height: 50rem;
-    margin: 0 0 15px 0;
+    font-size: 16rem;
+    font-weight: 500;
+    color: #777;
+    margin: 0 0 44rem 0;
+}
+
+.main_notice .content .right_notice .btn_blue,
+.btn_pink {
+    font-size: 20rem;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 10rem;
+    padding: 12rem 24rem;
+    text-align: center;
 }
 
 .main_notice .content .right_notice .btn_blue {
-    font-size: 15rem;
-    border-radius: 10rem;
     background: #6cd2cd;
-    padding: 10px 12rem;
-    line-height: 1.5;
-    text-align: center;
 }
 
 .main_notice .content .right_notice .btn_pink {
-    font-size: 15rem;
-    border-radius: 10rem;
     background: #fa6e91;
-    padding: 10px 12rem;
-    line-height: 1.5;
-    text-align: center;
+    margin: 0 0 0 8rem;
 }
 
 .footer {
