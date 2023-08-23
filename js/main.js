@@ -12,16 +12,16 @@ $(function () {
     });
 
     // 스크롤 시 애니메이션 효과
-    $(window).on('scroll', function () {
-        let sct = $(window).scrollTop();
-        $('._sec_scroll').each(function () {
-            if (sct + $(window).innerHeight() - 200 > $(this).offset().top) {
-                $(this).addClass('on');
-            } else {
-                $(this).removeClass('on');
-            }
-        })
-    })
+    // $(window).on('scroll', function () {
+    //     let sct = $(window).scrollTop();
+    //     $('._sec_scroll').each(function () {
+    //         if (sct + $(window).innerHeight() - 200 > $(this).offset().top) {
+    //             $(this).addClass('on');
+    //         } else {
+    //             $(this).removeClass('on');
+    //         }
+    //     })
+    // })
 
     // 메인 슬라이드 스크롤 버튼
     $('.scroll').on('click', function (e) {
@@ -70,7 +70,7 @@ $(function () {
     const ProgramSlide = new Swiper('.sub_slide', {
         // loop: true,   // 슬라이드 반복 여부
         // loopAdditionalSlides: 3,
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 30,
         freeMode: true,
         navigation: {
@@ -78,6 +78,12 @@ $(function () {
             prevEl: ".swiper-button-prev",
 
         },
+        breakpoints: {
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 36,
+            },
+        }
     });
 
     // 스와이퍼 배너 슬라이드
@@ -101,7 +107,7 @@ $(function () {
         loop: true,
         slidesPerView: 1,
         slidesPerGroupSkip: 1,
-        spaceBetween: 0,
+        spaceBetween: 15,
         scrollbar: {
             el: ".swiper-scrollbar",
         },
@@ -112,7 +118,7 @@ $(function () {
         breakpoints: {
             768: {
                 slidesPerView: 3,
-                spaceBetween: 30,
+                spaceBetween: 36,
             }
 
         }
@@ -142,6 +148,25 @@ $(function () {
         sct > 400 ? $('.to_top').addClass('on') : $('.to_top').removeClass('on');
     })
 
+
+    // 모바일
+    $('.mobile_btn').on('click', function () {
+        $(this).toggleClass('on');
+        $('.gnb').toggleClass('on');
+    });
+
+    $('.gnb>ul>li>a').on('click', function (e) {
+        if ($('.gnb').hasClass('on')) {
+            e.preventDefault();
+        }
+
+        $(this).next().stop().slideDown();
+        $(this).parent().siblings().find('.sub_menu').stop().slideUp();
+    });
+
+    $(window).on('resize', function () {
+        $('.gnb .sub_menu').removeAttr('style')
+    })
 
 
 });
