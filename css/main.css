@@ -1121,10 +1121,12 @@
         /* 390 size에 맞춤 (16/390*6.25/100) 디자인 사이즈 */
     }
 
+    /* r */
     .sec {
         padding: 50rem 0;
     }
 
+    /* r */
     .sec .title h2 {
         font-size: 40rem;
         font-weight: 800;
@@ -1135,7 +1137,6 @@
     .header .header_top_wrap {
         display: none;
     }
-
 
 
     /* r */
@@ -1179,6 +1180,7 @@
         display: none;
     }
 
+    /* r */
     .header .header_center_wrap.on .search {
         display: block;
     }
@@ -1219,9 +1221,8 @@
     }
 
 
-    /* 각 메뉴  */
+    /* r */
     .gnb>ul>li {
-        /* r */
         line-height: 30px;
         width: 100%;
         text-align: center;
@@ -1233,27 +1234,26 @@
         background: none;
     }
 
+    /* r */
     .gnb>ul>li a {
         font-size: 20rem;
     }
 
-    /* 서브 메뉴 만들고 높이를 없애기 */
+    /* r */
     .gnb>ul>li .sub_menu {
-        /* r */
+
         position: static;
         background: var(--wc);
         width: 100%;
     }
 
+    /* r */
     .gnb>ul>li:hover .sub_menu {
-        /* r */
         display: none;
     }
 
-
+    /* r */
     .gnb>ul>li .sub_menu li a {
-
-        /* r */
         color: var(--dc);
         font-size: 16rem;
         font-weight: 500;
