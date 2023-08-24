@@ -63,6 +63,7 @@
 
     background: var(--wc);
     line-height: 25rem;
+
 }
 
 .header .header_center_wrap .inner {
@@ -139,6 +140,11 @@
     height: 50rem;
 }
 
+/* 각 메뉴  */
+.gnb>ul>li {
+    position: relative;
+}
+
 .gnb>ul>li a {
     display: block;
     color: var(--wc);
@@ -149,32 +155,28 @@
 }
 
 
-/* 각 메뉴  */
-.gnb>ul>li {
-    position: relative;
-}
-
 
 /* 서브 메뉴 만들고 높이를 없애기 */
 .gnb>ul>li .sub_menu {
-    height: 0;
     background: var(--mc);
-    overflow: hidden;
     position: absolute;
     top: 50rem;
     left: 0;
-    transform: translate(0, 0);
     z-index: 999;
-    width: max-content;
+    padding: 8rem;
+    white-space: nowrap;
+    /* width: max-content; */
+
+    display: none;
 }
 
-.gnb>ul>li .large .sm_right {
-    float: right;
+.gnb>ul>li .large {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    display: none;
 }
 
-.gnb>ul>li .large .sm_left {
-    float: left;
-}
 
 .gnb>ul>li .sub_menu li a {
     font-weight: 400;
@@ -186,8 +188,7 @@
 
 /* 메뉴에 마우스 갖다대면 서브 메뉴 등장 */
 .gnb>ul>li:hover .sub_menu {
-    height: max-content;
-    padding: 8rem;
+    display: grid;
 }
 
 .gnb>ul>li:hover {
@@ -264,6 +265,7 @@
     font-weight: 700;
     margin: 0 0 16rem 0;
 }
+
 
 .main_visual .main_slide .itm .content p {
     font-size: 20rem;
@@ -356,12 +358,12 @@
     bottom: 100rem;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 1200rem;
-    width: 100%;
+    width: 50rem;
     padding: 0 15rem;
     z-index: 998;
     font-size: 18rem;
     color: var(--wc);
+    margin: 0 0 0 -575rem;
 }
 
 .main_visual .arrows li {
@@ -604,7 +606,20 @@
 */
 
 .main_service {
-    padding: 100px 0 0 0;
+    position: relative;
+    padding: 100rem 0 0 0;
+}
+
+/* 선 */
+.main_service::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1170rem;
+    height: 0.3rem;
+    background: rgba(0, 0, 0, 0.1);
 }
 
 .main_service .s_banner {
@@ -643,21 +658,6 @@
     color: var(--wc);
 }
 
-.main_service {
-    position: relative;
-}
-
-/* 선 */
-.main_service::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1170rem;
-    height: 0.3rem;
-    background: rgba(0, 0, 0, 0.1);
-}
 
 /* 
 
@@ -1131,202 +1131,145 @@
         margin: 0 0 36rem 0;
     }
 
-    .header {
+    /* r */
+    .header .header_top_wrap {
         display: none;
     }
 
-    .header .header_top_wrap {
-        background: var(--mc);
-    }
-
-    .header .header_top_wrap ul {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 10rem;
-        height: 50rem;
-    }
-
-    .header .header_top_wrap ul>li a {
-        position: relative;
-
-        font-size: 14rem;
-        color: var(--wc);
-        padding: 2px 13rem;
-    }
-
-    .header .header_top_wrap ul>li:first-child a {
-        color: var(--mc);
-        background: var(--wc);
-        border-radius: 16rem;
-    }
-
-    .header .header_top_wrap ul>li~li:hover a {
-        color: var(--mc);
-        background: var(--wc);
-        border-radius: 16rem;
-    }
-
-    .header .header_top_wrap ul>li:not(:first-child)~li a::before {
-        content: "";
-        position: absolute;
-        left: -5rem;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 2rem;
-        height: 2rem;
-        background: var(--wc);
-    }
 
 
+    /* r */
     .header .header_center_wrap {
-
-        background: var(--wc);
-        line-height: 25rem;
-    }
-
-    .header .header_center_wrap .inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 80rem;
-    }
-
-    .header .header_center_wrap ul {
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
-        font-size: 20rem;
-        gap: 15rem;
-    }
-
-    .header .header_center_wrap ul li p {
-        font-size: 10rem;
-    }
-
-
-    .header .header_center_wrap input[type="text"] {
-        width: 300rem;
-        height: 30rem;
-        font-size: 15rem;
-        font-family: 'Diphylleia', serif;
-        transition: width 0.5s;
-        border: none;
-        border-bottom: 2px solid #000;
-    }
-
-    .header .header_center_wrap input[type="text"]:focus {
-        width: 350rem;
-        height: 30rem;
-        outline: none;
-
-    }
-
-    .header .header_center_wrap input[type="text"]::placeholder {
-        color: #ddd;
-    }
-
-    .header .header_center_wrap input[type="text"]:focus::placeholder {
-        color: transparent;
-    }
-
-    .header .header_center_wrap button {
-        border: none;
-        outline: none;
-        background: transparent;
-
-        font-size: 25rem;
-        vertical-align: middle;
-    }
-
-    .header .header_bottom_wrap {
-        background: var(--bc);
-    }
-
-    .header.on .header_bottom_wrap {
         position: fixed;
         left: 0;
         right: 0;
         top: 0;
-        z-index: 999;
-
+        z-index: 1000;
+        border-bottom: 1px solid #ddd;
     }
 
-    .gnb>ul {
+    /* r */
+    .header .header_center_wrap .inner {
+        transition: 0.5s;
+    }
+
+    /* r */
+    .header .header_center_wrap.on .inner {
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: flex-start;
         align-items: center;
-        height: 50rem;
+        padding: 20rem;
+        gap: 8rem 30rem;
+        height: 120rem;
     }
 
-    .gnb>ul>li a {
+    /* r */
+    .header .header_center_wrap input[type="text"] {
+        width: 190rem;
+    }
+
+    /* r */
+    .header .header_center_wrap input[type="text"]:focus {
+        width: 300rem;
+    }
+
+    /* r */
+    .header .header_center_wrap .search {
+        display: none;
+    }
+
+    .header .header_center_wrap.on .search {
         display: block;
-        color: var(--wc);
-        font-size: 16rem;
-        font-weight: 600;
-        padding: 17rem;
+    }
+
+    /* r */
+    .header .header_center_wrap .service {
+        display: none;
+    }
+
+    /* r */
+    .gnb {
+        position: fixed;
+        inset: 0 auto 0 100%;
+        background: #000;
         width: 100%;
+        transition: 0.5s;
+
+        /* 하위 메뉴 길이에 따른 스크롤  */
+        overflow: auto;
+    }
+
+    /* r */
+    .gnb.on {
+
+        inset: 0 auto 0 0;
+    }
+
+    /* r */
+    .gnb>ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 150px 0 0 0;
+    }
+
+    /* r */
+    .gnb>ul>li:last-child {
+        display: none;
     }
 
 
     /* 각 메뉴  */
     .gnb>ul>li {
-        position: relative;
+        /* r */
+        line-height: 30px;
+        width: 100%;
+        text-align: center;
+        border: 1;
     }
 
+    /* r */
+    .gnb>ul>li:hover {
+        background: none;
+    }
+
+    .gnb>ul>li a {
+        font-size: 20rem;
+    }
 
     /* 서브 메뉴 만들고 높이를 없애기 */
     .gnb>ul>li .sub_menu {
-        height: 0;
-        background: var(--mc);
-        overflow: hidden;
-        position: absolute;
-        top: 50rem;
-        left: 0;
-        transform: translate(0, 0);
-        z-index: 999;
-        width: max-content;
+        /* r */
+        position: static;
+        background: var(--wc);
+        width: 100%;
     }
 
-    .gnb>ul>li .large .sm_right {
-        float: right;
+    .gnb>ul>li:hover .sub_menu {
+        /* r */
+        display: none;
     }
 
-    .gnb>ul>li .large .sm_left {
-        float: left;
-    }
 
     .gnb>ul>li .sub_menu li a {
-        font-weight: 400;
+
+        /* r */
+        color: var(--dc);
         font-size: 16rem;
-        line-height: 20rem;
-        padding: 12rem 24rem 8rem 8rem;
+        font-weight: 500;
+        padding: 5rem
     }
 
 
-    /* 메뉴에 마우스 갖다대면 서브 메뉴 등장 */
-    .gnb>ul>li:hover .sub_menu {
-        height: max-content;
-        padding: 8rem;
-    }
-
-    .gnb>ul>li:hover {
-        background: var(--mc);
-    }
-
+    /* r */
     .gnb>ul>li:hover .sub_menu li {
-        background: var(--mc);
+        background: none;
     }
 
-
-    .gnb>ul>li .sub_menu li:hover {
-        background: var(--wc);
+    /* r */
+    .gnb>ul>li .sub_menu li:not(:last-child) {
+        border-bottom: 1px solid #ddd;
     }
-
-    .gnb>ul>li .sub_menu li:hover a {
-        color: var(--mc);
-    }
-
 
     /*
     
@@ -1343,18 +1286,25 @@
 
     /* r */
     .main_visual .main_slide .itm .content {
-        text-shadow: 1rem 2rem 15rem #000;
+        margin: 60rem 0 0 0;
+        text-shadow: 1rem 1rem 20rem #000;
+    }
+
+    /* r */
+    .main_visual .main_slide .itm .content strong {
+        font-size: 56rem;
     }
 
     /* r */
     .main_visual .swiper-pagination01 {
         left: 50%;
         transform: translate(-50%, -50%);
-        margin: 0 0 0 175rem;
+        margin: 0 0 0 5rem;
     }
 
     /* r */
     .main_visual .arrows {
+        margin: 0 0 0 0;
         bottom: 35rem;
         padding: 0;
     }
@@ -1461,9 +1411,22 @@
     
     */
 
+
     /* r */
     .main_service {
         padding: 50rem 0 0 0;
+    }
+
+    /* r */
+    .main_service::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 0.3rem;
+        background: rgba(0, 0, 0, 0.1);
     }
 
     /* r */
@@ -1627,6 +1590,74 @@
     /* r */
     .footer .right_ft input {
         width: 100%;
+    }
+
+
+
+    /* r */
+    .mobile_btn {
+        /* r */
+        display: block;
+
+        position: fixed;
+        inset: 25px 15px auto auto;
+        z-index: 1000;
+        width: 30px;
+        height: 30px;
+        background: #000;
+        border-radius: 5px;
+    }
+
+    .mobile_btn::before,
+    .mobile_btn::after {
+        content: "";
+        position: absolute;
+        inset: 14px 5px auto 5px;
+        height: 2px;
+        background: #fff;
+
+    }
+
+    .mobile_btn.on::before {
+        transform: rotate(45deg);
+        transition: 0.5s 0.2s;
+    }
+
+    .mobile_btn.on::after {
+        transform: rotate(-45deg);
+        transition: 0.5s 0.6s;
+    }
+
+
+
+    .mobile_btn button {
+        border: none;
+        outline: none;
+        background: transparent;
+    }
+
+    .mobile_btn button::before,
+    .mobile_btn button::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        background: #fff;
+    }
+
+    .mobile_btn button::before {
+        inset: 7px 5px auto 5px;
+    }
+
+    .mobile_btn button::after {
+        inset: auto 5px 7px 5px;
+    }
+
+    .mobile_btn.on button::before {
+        display: none;
+    }
+
+    .mobile_btn.on button::after {
+        display: none;
     }
 
 }

@@ -1,27 +1,6 @@
 $(function () {
 
 
-    // 스크롤 시 헤더 
-    $(window).on('scroll', function () {
-        let sct = $(window).scrollTop();
-        if (sct > 130) {
-            $('.header').addClass('on');
-        } else {
-            $('.header').removeClass('on');
-        }
-    });
-
-    // 스크롤 시 애니메이션 효과
-    // $(window).on('scroll', function () {
-    //     let sct = $(window).scrollTop();
-    //     $('._sec_scroll').each(function () {
-    //         if (sct + $(window).innerHeight() - 200 > $(this).offset().top) {
-    //             $(this).addClass('on');
-    //         } else {
-    //             $(this).removeClass('on');
-    //         }
-    //     })
-    // })
 
     // 메인 슬라이드 스크롤 버튼
     $('.scroll').on('click', function (e) {
@@ -144,24 +123,36 @@ $(function () {
     // 탑 스크롤 없앴다가 나타나게 만들기
     $(window).on('scroll', function () {
         let sct = $(window).scrollTop();
-
-        sct > 400 ? $('.to_top').addClass('on') : $('.to_top').removeClass('on');
+        if (!$('.gnb').hasClass('on')) {
+            sct > 400 ? $('.to_top').addClass('on') : $('.to_top').removeClass('on');
+        }
     })
 
+
+    // 스크롤 시 헤더 고정
+    $(window).on('scroll', function () {
+        let sct = $(window).scrollTop();
+        if (sct > 130) {
+            $('.header').addClass('on');
+        } else {
+            $('.header').removeClass('on');
+        }
+    });
 
     // 모바일
     $('.mobile_btn').on('click', function () {
         $(this).toggleClass('on');
         $('.gnb').toggleClass('on');
+        $('.header_center_wrap').toggleClass('on');
+        $('.to_top').removeClass('on');
     });
 
     $('.gnb>ul>li>a').on('click', function (e) {
         if ($('.gnb').hasClass('on')) {
             e.preventDefault();
         }
-
-        $(this).next().stop().slideDown();
-        $(this).parent().siblings().find('.sub_menu').stop().slideUp();
+        $(this).next().stop().slideToggle();
+        $(this).parent().siblings().find('.gnb .sub_menu').stop().slideUp();
     });
 
     $(window).on('resize', function () {
