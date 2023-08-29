@@ -8,7 +8,6 @@
     --bc: #000000;
 }
 
-
 .header {
     position: relative;
     top: 0;
@@ -855,7 +854,7 @@
 .main_notice .content {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200rem, 1fr));
     gap: 36rem;
 }
 
@@ -1308,7 +1307,6 @@
         margin: 0 0 0 0;
         bottom: 35rem;
         padding: 0;
-        width: 100%;
     }
 
     /* r */
@@ -1316,7 +1314,6 @@
         position: absolute;
         left: 50%;
         margin: 0 0 0 -60rem;
-        width: 100%;
     }
 
     /* r */
@@ -1324,7 +1321,6 @@
         position: absolute;
         left: 50%;
         margin: 0 0 0 40rem;
-        width: 100%;
     }
 
     /* r */
@@ -1435,7 +1431,7 @@
 
     /* r */
     .main_service .s_banner {
-        grid-template-columns: repeat(auto-fit, minmax(300rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200rem, 1fr));
     }
 
     /* r */
@@ -1446,7 +1442,7 @@
 
     /* r */
     .main_service .s_banner .txt_box {
-        grid-template-columns: repeat(auto-fit, minmax(300rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200rem, 1fr));
     }
 
     /* r */
@@ -1480,7 +1476,7 @@
     /* r */
     .main_news .content {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200rem, 1fr));
         gap: 32rem;
     }
 
