@@ -1298,13 +1298,14 @@
     /* r */
     .main_visual .swiper-pagination01 {
         left: 50%;
-        transform: translate(-50%, -50%);
-        margin: 0 0 0 175rem;
+        transform: translate(0, -50%);
+        width: 100%;
+        margin: 0 0 0 -20rem;
     }
 
     /* r */
     .main_visual .arrows {
-        margin: 0 auto;
+        margin: 0 0 0 0;
         bottom: 35rem;
         padding: 0;
         width: 100%;
@@ -1314,14 +1315,16 @@
     .main_visual .arrows .left {
         position: absolute;
         left: 50%;
-        margin: 0 0 0 -50rem;
+        margin: 0 0 0 -60rem;
+        width: 100%;
     }
 
     /* r */
     .main_visual .arrows .right {
         position: absolute;
         left: 50%;
-        margin: 0 0 0 30rem;
+        margin: 0 0 0 40rem;
+        width: 100%;
     }
 
     /* r */
