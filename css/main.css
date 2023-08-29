@@ -1167,6 +1167,7 @@
     /* r */
     .header .header_center_wrap input[type="text"] {
         width: 190rem;
+        outline: none;
     }
 
     /* r */
@@ -1297,9 +1298,7 @@
     /* r */
     .main_visual .swiper-pagination01 {
         left: 50%;
-        transform: translate(0, -50%);
-        width: 100%;
-        margin: 0 0 0 -20rem;
+        transform: translate(-50%, -50%);
     }
 
     /* r */
@@ -1313,7 +1312,7 @@
     .main_visual .arrows .left {
         position: absolute;
         left: 50%;
-        margin: 0 0 0 -60rem;
+        margin: 0 0 0 -70rem;
     }
 
     /* r */
