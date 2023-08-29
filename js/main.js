@@ -150,13 +150,14 @@ $(function () {
     $('.gnb>ul>li>a').on('click', function (e) {
         if ($('.gnb').hasClass('on')) {
             e.preventDefault();
+            $(this).next().stop().slideToggle();
+            $(this).parent().siblings().find('.gnb .sub_menu').stop().slideUp();
         }
-        $(this).next().stop().slideToggle();
-        $(this).parent().siblings().find('.gnb .sub_menu').stop().slideUp();
     });
 
     $(window).on('resize', function () {
-        $('.gnb .sub_menu').removeAttr('style')
+        $('.gnb').removeClass('on');
+        $('.gnb .sub_menu').removeAttr('style');
     })
 
 
