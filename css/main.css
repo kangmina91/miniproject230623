@@ -342,14 +342,7 @@
     border: 1px solid var(--wc);
 }
 
-/* 메인 슬라이드 넘버링 */
-.main_visual .swiper-pagination01 {
-    position: absolute;
-    top: 0;
-    left: 45rem;
-    color: var(--wc);
 
-}
 
 /* 메인 슬라이드 화살표 */
 .main_visual .arrows {
@@ -357,12 +350,12 @@
     bottom: 100rem;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50rem;
-    padding: 0 15rem;
     z-index: 998;
+    width: 120rem;
+    height: 20rem;
     font-size: 18rem;
     color: var(--wc);
-    margin: 0 0 0 -575rem;
+    margin: 0 0 0 -500rem;
 }
 
 .main_visual .arrows li {
@@ -370,16 +363,22 @@
     transition: 0.5s;
 }
 
+.main_visual .arrows .swiper-pagination01 {
+    margin: -20rem 0 0 40rem;
+    width: auto;
+}
+
+
 .main_visual .arrows .left {
-    position: absolute;
-    left: 15rem;
+    display: inline-block;
+    margin: 0 0 0 0;
 }
 
 .main_visual .arrows .right {
-    position: absolute;
-    left: 95rem;
-
+    display: inline-block;
+    margin: 0 0 0 77rem;
 }
+
 
 /* 메인 슬라이드 스크롤 효과 */
 .main_visual .scroll {
@@ -1295,31 +1294,26 @@
         font-size: 56rem;
     }
 
-    /* r */
-    .main_visual .swiper-pagination01 {
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
 
     /* r */
     .main_visual .arrows {
         margin: 0 0 0 0;
-        bottom: 35rem;
-        padding: 0;
+        bottom: 0;
+    }
+
+    /* r */
+    .main_visual .arrows .swiper-pagination01 {
+        margin: -20rem 0 0 40rem;
     }
 
     /* r */
     .main_visual .arrows .left {
-        position: absolute;
-        left: 50%;
-        margin: 0 0 0 -70rem;
+        margin: 0 0 0 0;
     }
 
     /* r */
     .main_visual .arrows .right {
-        position: absolute;
-        left: 50%;
-        margin: 0 0 0 40rem;
+        margin: 0 0 0 78rem;
     }
 
     /* r */
